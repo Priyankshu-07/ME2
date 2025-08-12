@@ -116,7 +116,7 @@ const Education: React.FC = () => {
                       </div>
                       <div className="flex items-center space-x-2 bg-gray-800/30 rounded-lg px-3 py-2">
                         <Calendar size={18} className="text-green-400" />
-                        <span className="font-medium">2020 - 2024</span>
+                        <span className="font-medium">2022 - 2026</span>
                       </div>
                     </div>
                     
