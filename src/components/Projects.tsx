@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, Github, Brain, MessageCircle, Mail, Play, Star, GitBranch } from 'lucide-react';
+import { ExternalLink, Github, Brain, MessageCircle, Mail, Play, Star } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -19,7 +19,8 @@ const Projects: React.FC = () => {
         'Automated question paper generation using LangChain and Groq API'
       ],
       gradient: 'from-blue-500/20 via-blue-600/10 to-purple-500/20',
-      stats: { stars: 24, forks: 8, commits: 156 }
+      stats: { stars: 24, forks: 8, commits: 156 },
+      github: 'https://github.com/Priyankshu-07/VISION'
     },
     {
       title: 'YAP - Real-Time Chat and Video Call App',
@@ -33,7 +34,8 @@ const Projects: React.FC = () => {
         'Scalable Node.js backend architecture'
       ],
       gradient: 'from-green-500/20 via-green-600/10 to-cyan-500/20',
-      stats: { stars: 18, forks: 5, commits: 89 }
+      stats: { stars: 18, forks: 5, commits: 89 },
+      github: 'https://github.com/Priyankshu-07/YAP'
     },
     {
       title: 'VoltMail - AI Cold Email Generator',
@@ -47,7 +49,8 @@ const Projects: React.FC = () => {
         'Streamlit frontend with Express.js backend'
       ],
       gradient: 'from-purple-500/20 via-purple-600/10 to-pink-500/20',
-      stats: { stars: 31, forks: 12, commits: 203 }
+      stats: { stars: 31, forks: 12, commits: 203 },
+      github: 'https://github.com/Priyankshu-07/VoltMail'
     }
   ];
 
@@ -157,10 +160,15 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  <button className="group flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  <a
+                    href={projects[activeProject].github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
                     <Github size={18} />
                     <span>View Code</span>
-                  </button>
+                  </a>
                   <button className="group flex items-center space-x-2 px-6 py-3 border border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white rounded-lg transition-all duration-300 hover:bg-gray-800/50">
                     <Play size={18} />
                     <span>Live Demo</span>
