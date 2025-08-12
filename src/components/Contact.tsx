@@ -40,14 +40,14 @@ const Contact: React.FC = () => {
     {
       icon: <Github className="text-gray-300" size={20} />,
       label: 'GitHub',
-      href: 'https://github.com/priyankshusinha98',
+      href: 'https://github.com/Priyankshu-07',
       color: 'hover:text-gray-100',
       gradient: 'from-gray-500/20 to-gray-600/5'
     },
     {
       icon: <Linkedin className="text-blue-400" size={20} />,
       label: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/priyankshu-sinha-8ab512296/',
       color: 'hover:text-blue-300',
       gradient: 'from-blue-500/20 to-blue-600/5'
     },
