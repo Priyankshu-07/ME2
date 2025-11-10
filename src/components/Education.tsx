@@ -44,7 +44,7 @@ const Education: React.FC = () => {
 
   const educationStats = [
     { label: 'Specialization', value: 'CST', color: 'blue' },
-    { label: 'Graduated', value: '2024', color: 'purple' },
+    { label: 'Graduated', value: '2026', color: 'purple' },
     { label: 'Institute', value: 'MSIT', color: 'green' }
   ];
 
