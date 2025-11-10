@@ -126,9 +126,9 @@ const Education: React.FC = () => {
             {/* Animated border gradient */}
             <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500/20 via-violet-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700" aria-hidden="true" />
             
-            <div className="relative grid lg:grid-cols-3 gap-10">
+            <div className="relative grid lg:grid-cols-5 gap-8">
               {/* Primary Education Information */}
-              <div className="lg:col-span-2 space-y-8">
+              <div className="lg:col-span-3 space-y-8">
                 <div className="flex flex-col sm:flex-row items-start space-y-6 sm:space-y-0 sm:space-x-6">
                   <div 
                     className="flex-shrink-0 p-5 bg-gradient-to-br from-cyan-600/30 to-violet-600/30 rounded-3xl border border-cyan-500/40 hover:scale-110 hover:rotate-6 transition-all duration-500 shadow-xl shadow-cyan-500/20"
@@ -173,8 +173,8 @@ const Education: React.FC = () => {
               </div>
 
               {/* Academic Highlights Sidebar */}
-              <aside className="space-y-6" aria-label="Academic highlights">
-                <h4 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <aside className="lg:col-span-2 space-y-4" aria-label="Academic highlights">
+                <h4 className="text-2xl font-bold text-white mb-5 flex items-center">
                   <Award className="mr-3 text-yellow-400" size={28} aria-hidden="true" />
                   <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Highlights</span>
                 </h4>
@@ -183,18 +183,18 @@ const Education: React.FC = () => {
                   {academicHighlights.map((highlight, index) => (
                     <div
                       key={highlight.title}
-                      className={`group/highlight p-6 bg-gradient-to-br ${highlight.gradient} backdrop-blur-sm rounded-2xl border border-slate-700/40 hover:border-slate-600/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl cursor-pointer`}
+                      className={`group/highlight p-5 bg-gradient-to-br ${highlight.gradient} backdrop-blur-sm rounded-2xl border border-slate-700/40 hover:border-slate-600/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl cursor-pointer`}
                       style={{ 
                         animation: isVisible ? `fadeInUp 0.6s ease-out forwards ${index * 150}ms` : 'none',
                         opacity: isVisible ? 1 : 0 
                       }}
                     >
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 p-3 bg-slate-800/60 rounded-xl group-hover/highlight:scale-110 group-hover/highlight:rotate-6 transition-all duration-300 border border-slate-700/30">
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0 p-2.5 bg-slate-800/60 rounded-xl group-hover/highlight:scale-110 group-hover/highlight:rotate-6 transition-all duration-300 border border-slate-700/30">
                           {highlight.icon}
                         </div>
                         <div className="flex-1">
-                          <h5 className="text-white font-bold mb-2 text-lg group-hover/highlight:text-cyan-300 transition-colors">
+                          <h5 className="text-white font-bold mb-1.5 text-base group-hover/highlight:text-cyan-300 transition-colors">
                             {highlight.title}
                           </h5>
                           <p className="text-gray-400 text-sm leading-relaxed group-hover/highlight:text-gray-300 transition-colors">
@@ -204,44 +204,6 @@ const Education: React.FC = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                {/* Learning Journey Card */}
-                <div className="bg-gradient-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm rounded-2xl p-7 border border-slate-700/50 hover:border-cyan-500/40 transition-all duration-500 group/journey hover:shadow-xl hover:shadow-cyan-500/10">
-                  <h5 className="text-white font-bold mb-5 text-lg group-hover/journey:text-cyan-300 transition-colors flex items-center">
-                    <BookOpen className="mr-3 group-hover/journey:rotate-12 transition-transform duration-300" size={22} aria-hidden="true" />
-                    Learning Journey
-                  </h5>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div 
-                        className="w-14 h-14 bg-gradient-to-br from-cyan-500 via-violet-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover/journey:scale-110 group-hover/journey:rotate-12 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-                        aria-hidden="true"
-                      >
-                        <span className="text-white text-2xl" role="img" aria-label="graduation cap">🎓</span>
-                      </div>
-                      <div className="flex-1">
-                        <div className="text-base font-bold text-gray-200 group-hover/journey:text-white transition-colors">
-                          Computer Science Excellence
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">
-                          Theory meets practice in real-world applications
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-5 bg-gradient-to-br from-cyan-500/15 to-cyan-500/5 rounded-2xl hover:from-cyan-500/25 hover:to-cyan-500/10 transition-all duration-300 transform hover:scale-105 border border-cyan-500/20 hover:border-cyan-400/40 group/stat">
-                        <div className="text-3xl font-black text-cyan-400 group-hover/stat:scale-110 transition-transform">4</div>
-                        <div className="text-xs text-gray-400 mt-2 font-semibold uppercase tracking-wider">Years</div>
-                      </div>
-                      <div className="text-center p-5 bg-gradient-to-br from-violet-500/15 to-violet-500/5 rounded-2xl hover:from-violet-500/25 hover:to-violet-500/10 transition-all duration-300 transform hover:scale-105 border border-violet-500/20 hover:border-violet-400/40 group/stat">
-                        <div className="text-3xl font-black text-violet-400 group-hover/stat:scale-110 transition-transform">B.Tech</div>
-                        <div className="text-xs text-gray-400 mt-2 font-semibold uppercase tracking-wider">Degree</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </aside>
             </div>
